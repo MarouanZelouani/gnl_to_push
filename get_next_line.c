@@ -6,7 +6,7 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 14:34:41 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/12/06 15:04:31 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/12/08 04:59:38 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	read_line_fd(char **stash, int fd)
 
 	while (!ft_strchr(*stash, '\n'))
 	{
-		holder = malloc(BUFFER_SIZE + 1);
+		holder = malloc(((size_t)BUFFER_SIZE + 1) * sizeof(char));
 		if (holder == NULL)
 			return ;
 		read_count = read(fd, holder, BUFFER_SIZE);
@@ -81,7 +81,7 @@ char	*clean_stash(char *stash)
 		i++;
 	if (stash[i] && stash[i] == '\n')
 		i++;
-	holder = malloc((ft_strlen(stash) - i) + 1);
+	holder = malloc(((ft_strlen(stash) - i) + 1) * sizeof(char));
 	if (holder == NULL)
 		return (NULL);
 	while (stash[i])

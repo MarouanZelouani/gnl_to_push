@@ -6,11 +6,11 @@
 /*   By: mzelouan <mzelouan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 14:34:33 by mzelouan          #+#    #+#             */
-/*   Updated: 2023/12/06 14:34:34 by mzelouan         ###   ########.fr       */
+/*   Updated: 2023/12/08 01:20:13 by mzelouan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
 {
